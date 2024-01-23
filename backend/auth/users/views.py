@@ -21,6 +21,7 @@ class RegisterView(APIView):
 class LoginView(APIView):
     def post(self, request):
         email = request.data.get('email')
+        number = request.data.get('number')
         password = request.data.get('password')
         metamask_address = request.data.get('metamask_address')
 

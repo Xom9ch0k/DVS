@@ -4,7 +4,7 @@ from .models import User, Contract, UserRegistration
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User    
-        fields = ['id', 'username', 'email', 'password', 'iin', 'metamask_address']
+        fields = ['id', 'username', 'email', 'password', 'number', 'iin', 'metamask_address']
         extra_kwargs = {
             'password' : {'write_only' : True}
         }

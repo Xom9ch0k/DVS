@@ -6,6 +6,7 @@ class User(AbstractUser):
     username = models.CharField(max_length=255)
     email = models.CharField(max_length=255, unique=True)
     password = models.CharField(max_length=255)
+    number = models.CharField(max_length=255, default = '00000000000')
     metamask_address = models.CharField(max_length=255, unique=True, default='0x0000000000000000000000000000000000000000')
     iin = models.CharField(max_length=12, unique=True, default='000000000000')
     isAdmin = models.BooleanField(default=False)
